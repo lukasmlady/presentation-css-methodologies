@@ -1,0 +1,2351 @@
+@import url(../../lib/font/league-gothic/league-gothic.css);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+/**
+ * Solarized Dark theme for reveal.js.
+ * Author: Achim Staebler
+ */
+/**
+ * Solarized colors by Ethan Schoonover
+ */
+html * {
+  color-profile: sRGB;
+  rendering-intent: auto; }
+
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+body {
+  background: #002b36;
+  background-color: #002b36; }
+
+.reveal {
+  font-family: 'Lato', sans-serif;
+  font-size: 36px;
+  font-weight: normal;
+  color: #93a1a1; }
+
+::selection {
+  color: #fff;
+  background: #d33682;
+  text-shadow: none; }
+
+.reveal .slides > section, .reveal .slides > section > section {
+  line-height: 1.3;
+  font-weight: inherit; }
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+  margin: 0 0 20px 0;
+  color: #eee8d5;
+  font-family: 'League Gothic', Impact, sans-serif;
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  text-shadow: none;
+  word-wrap: break-word; }
+
+.reveal h1 {
+  font-size: 3.77em; }
+
+.reveal h2 {
+  font-size: 2.11em; }
+
+.reveal h3 {
+  font-size: 1.55em; }
+
+.reveal h4 {
+  font-size: 1em; }
+
+.reveal h1 {
+  text-shadow: none; }
+
+/*********************************************
+ * OTHER
+ *********************************************/
+.reveal p {
+  margin: 20px 0;
+  line-height: 1.3; }
+
+/* Ensure certain elements are never larger than the slide itself */
+.reveal img, .reveal video, .reveal iframe {
+  max-width: 95%;
+  max-height: 95%; }
+
+.reveal strong, .reveal b {
+  font-weight: bold; }
+
+.reveal em {
+  font-style: italic; }
+
+.reveal ol, .reveal dl, .reveal ul {
+  display: inline-block;
+  text-align: left;
+  margin: 0 0 0 1em; }
+
+.reveal ol {
+  list-style-type: decimal; }
+
+.reveal ul {
+  list-style-type: disc; }
+
+.reveal ul ul {
+  list-style-type: square; }
+
+.reveal ul ul ul {
+  list-style-type: circle; }
+
+.reveal ul ul, .reveal ul ol, .reveal ol ol, .reveal ol ul {
+  display: block;
+  margin-left: 40px; }
+
+.reveal dt {
+  font-weight: bold; }
+
+.reveal dd {
+  margin-left: 40px; }
+
+.reveal q, .reveal blockquote {
+  quotes: none; }
+
+.reveal blockquote {
+  display: block;
+  position: relative;
+  width: 70%;
+  margin: 20px auto;
+  padding: 5px;
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2); }
+
+.reveal blockquote p:first-child, .reveal blockquote p:last-child {
+  display: inline-block; }
+
+.reveal q {
+  font-style: italic; }
+
+.reveal pre {
+  display: block;
+  position: relative;
+  width: 90%;
+  margin: 20px auto;
+  text-align: left;
+  font-size: 0.55em;
+  font-family: monospace;
+  line-height: 1.2em;
+  word-wrap: break-word;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3); }
+
+.reveal code {
+  font-family: monospace; }
+
+.reveal pre code {
+  display: block;
+  padding: 5px;
+  overflow: auto;
+  max-height: 400px;
+  word-wrap: normal;
+  background: #3F3F3F;
+  color: #DCDCDC; }
+
+.reveal table {
+  margin: auto;
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.reveal table th {
+  font-weight: bold; }
+
+.reveal table th, .reveal table td {
+  text-align: left;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  border-bottom: 1px solid; }
+
+.reveal table tr:last-child td {
+  border-bottom: none; }
+
+.reveal sup {
+  vertical-align: super; }
+
+.reveal sub {
+  vertical-align: sub; }
+
+.reveal small {
+  display: inline-block;
+  font-size: 0.6em;
+  line-height: 1.2em;
+  vertical-align: top; }
+
+.reveal small * {
+  vertical-align: top; }
+
+/*********************************************
+ * LINKS
+ *********************************************/
+.reveal a {
+  color: #268bd2;
+  text-decoration: none;
+  -webkit-transition: color 0.15s ease;
+  -moz-transition: color 0.15s ease;
+  transition: color 0.15s ease; }
+
+.reveal a:hover {
+  color: #78bae6;
+  text-shadow: none;
+  border: none; }
+
+.reveal .roll span:after {
+  color: #fff;
+  background: #1a6291; }
+
+/*********************************************
+ * IMAGES
+ *********************************************/
+.reveal section img {
+  margin: 15px 0px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 4px solid #93a1a1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
+
+.reveal a img {
+  -webkit-transition: all 0.15s linear;
+  -moz-transition: all 0.15s linear;
+  transition: all 0.15s linear; }
+
+.reveal a:hover img {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #268bd2;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+.reveal .controls div.navigate-left, .reveal .controls div.navigate-left.enabled {
+  border-right-color: #268bd2; }
+
+.reveal .controls div.navigate-right, .reveal .controls div.navigate-right.enabled {
+  border-left-color: #268bd2; }
+
+.reveal .controls div.navigate-up, .reveal .controls div.navigate-up.enabled {
+  border-bottom-color: #268bd2; }
+
+.reveal .controls div.navigate-down, .reveal .controls div.navigate-down.enabled {
+  border-top-color: #268bd2; }
+
+.reveal .controls div.navigate-left.enabled:hover {
+  border-right-color: #78bae6; }
+
+.reveal .controls div.navigate-right.enabled:hover {
+  border-left-color: #78bae6; }
+
+.reveal .controls div.navigate-up.enabled:hover {
+  border-bottom-color: #78bae6; }
+
+.reveal .controls div.navigate-down.enabled:hover {
+  border-top-color: #78bae6; }
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+.reveal .progress {
+  background: rgba(0, 0, 0, 0.2); }
+
+.reveal .progress span {
+  background: #268bd2;
+  -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+
+/*********************************************
+ * SLIDE NUMBER
+ *********************************************/
+.reveal .slide-number {
+  color: #268bd2; }
+
+/* Component
+   ========================================================================== */
+/**
+ * @atdoc component
+ * @name Grid
+ *
+ * @description
+ * All content must be contained within child `Grid-cell` elements.
+ *
+ * Make use of dimension utilities, or components that extend `Grid` in order
+ * to apply particular widths to cells.
+ *
+ * 1. Account for browser defaults of elements that might be the root node of
+ *    the component.
+ * 2. Ensure consistent default alignment.
+ * 3. Remove inter-cell whitespace that appears between `inline-block` child
+ *    elements.
+ *
+ * #no-IE9-replace
+ *
+ * @example
+  <example module="GridExample">
+    <file name="index.html">
+      <div class="Grid">
+        <div class="Grid-cell u-size1of2"></div>
+        <div class="Grid-cell u-size1of2"></div>
+        <div class="Grid-cell u-size1of3"></div>
+        <div class="Grid-cell u-size1of3"></div>
+      </div>
+
+      <div class="Grid Grid--justifyCenter">
+        <div class="Grid-cell u-size1of3"></div>
+        <div class="Grid-cell u-size1of3"></div>
+      </div>
+    </file>
+  </example>
+ */
+.Grid {
+  display: block;
+  /* 1 */
+  padding: 0;
+  /* 1 */
+  margin: 0;
+  /* 1 */
+  text-align: left;
+  /* 2 */
+  font-size: 0;
+  /* 3 */ }
+
+/* Component modifiers
+   ========================================================================== */
+/**
+ * @atdoc componentModifier
+ * @name fit
+ * @component Grid
+ *
+ * @description
+ * Make all grid cells shrink wrap their content.
+ */
+.Grid--fit > .Grid-cell {
+  width: auto; }
+
+/**
+ * @atdoc componentModifier
+ * @name justifyCenter
+ * @component Grid
+ *
+ * @description
+ * Horizontally center all grid cells.
+ *
+ * Allows for automatic cell centering irrespective of the number of
+ * cells in the grid.
+ */
+.Grid--justifyCenter {
+  text-align: center; }
+
+/**
+ * @atdoc componentModifier
+ * @name justifyRight
+ * @component Grid
+ *
+ * @description
+ * Align all grid cells to right.
+ */
+.Grid--justifyRight {
+  text-align: right; }
+
+/**
+ * @atdoc componentModifier
+ * @name alignMiddle
+ * @component Grid
+ *
+ * @description
+ * Vertically align all grid cells to middle.
+ */
+.Grid--alignMiddle > .Grid-cell {
+  vertical-align: middle; }
+
+/**
+ * @atdoc componentModifier
+ * @name alignBottom
+ * @component Grid
+ *
+ * @description
+ * Vertically align all grid cells to bottom.
+ */
+.Grid--alignBottom > .Grid-cell {
+  vertical-align: bottom; }
+
+/**
+ * Modifiers for creating gutter between grid cells.
+ *
+ * .Grid--gutter<ORIENTATION><Size>
+ *
+ * <ORIENTATION> can be:
+ * * `A` = all
+ * * `H` = horizontal
+ * * `V` = vertical
+ *
+ * <Size> can be:
+ * * `Small`
+ * * `Medium`
+ * * `Regular`
+ * * `Large`
+ */
+/**
+ * @atdoc componentModifier
+ * @name gutterHSmall
+ * @name gutterVSmall
+ * @name gutterASmall
+ * @component Grid
+ *
+ * @description
+ * Small-sized cell gutter.
+ */
+.Grid--gutterASmall, .Grid--gutterHSmall {
+  margin-left: -5px; }
+
+.Grid--gutterASmall > .Grid-cell, .Grid--gutterHSmall > .Grid-cell {
+  padding-left: 5px; }
+
+.Grid--gutterASmall, .Grid--gutterVSmall {
+  margin-top: -5px; }
+
+.Grid--gutterASmall > .Grid-cell, .Grid--gutterVSmall > .Grid-cell {
+  padding-top: 5px; }
+
+/**
+ * @atdoc componentModifier
+ * @name gutterHMedium
+ * @name gutterVMedium
+ * @name gutterAMedium
+ * @component Grid
+ *
+ * @description
+ * Medium-sized cell gutter.
+ */
+.Grid--gutterAMedium, .Grid--gutterHMedium {
+  margin-left: -10px; }
+
+.Grid--gutterAMedium > .Grid-cell, .Grid--gutterHMedium > .Grid-cell {
+  padding-left: 10px; }
+
+.Grid--gutterAMedium, .Grid--gutterVMedium {
+  margin-top: -10px; }
+
+.Grid--gutterAMedium > .Grid-cell, .Grid--gutterVMedium > .Grid-cell {
+  padding-top: 10px; }
+
+/**
+ * @atdoc componentModifier
+ * @name gutterHRegular
+ * @name gutterVRegular
+ * @name gutterARegular
+ * @component Grid
+ *
+ * @description
+ * Regular-sized cell gutter.
+ */
+.Grid--gutterARegular, .Grid--gutterHRegular {
+  margin-left: -15px; }
+
+.Grid--gutterARegular > .Grid-cell, .Grid--gutterHRegular > .Grid-cell {
+  padding-left: 15px; }
+
+.Grid--gutterARegular, .Grid--gutterVRegular {
+  margin-top: -15px; }
+
+.Grid--gutterARegular > .Grid-cell, .Grid--gutterVRegular > .Grid-cell {
+  padding-top: 15px; }
+
+/**
+ * @atdoc componentModifier
+ * @name gutterHLarge
+ * @name gutterVLarge
+ * @name gutterALarge
+ * @component Grid
+ *
+ * @description
+ * Large-sized cell gutter.
+ */
+.Grid--gutterALarge, .Grid--gutterHLarge {
+  margin-left: -20px; }
+
+.Grid--gutterALarge > .Grid-cell, .Grid--gutterHLarge > .Grid-cell {
+  padding-left: 20px; }
+
+.Grid--gutterALarge, .Grid--gutterVLarge {
+  margin-top: -20px; }
+
+.Grid--gutterALarge > .Grid-cell, .Grid--gutterVLarge > .Grid-cell {
+  padding-top: 20px; }
+
+/**
+ * @atdoc componentModifier
+ * @name gutterHHuge
+ * @name gutterVHuge
+ * @name gutterAHuge
+ * @component Grid
+ *
+ * @description
+ * Huge-sized cell gutter.
+ */
+.Grid--gutterAHuge, .Grid--gutterHHuge {
+  margin-left: -40px; }
+
+.Grid--gutterAHuge > .Grid-cell, .Grid--gutterHHuge > .Grid-cell {
+  padding-left: 40px; }
+
+.Grid--gutterAHuge, .Grid--gutterVHuge {
+  margin-top: -40px; }
+
+.Grid--gutterAHuge > .Grid-cell, .Grid--gutterVHuge > .Grid-cell {
+  padding-top: 40px; }
+
+/**
+ * @atdoc componentModifier
+ * @name gutterHVast
+ * @name gutterVVast
+ * @name gutterAVast
+ * @component Grid
+ *
+ * @description
+ * Vast-sized cell gutter.
+ */
+.Grid--gutterAVast, .Grid--gutterHVast {
+  margin-left: -80px; }
+
+.Grid--gutterAVast > .Grid-cell, .Grid--gutterHVast > .Grid-cell {
+  padding-left: 80px; }
+
+.Grid--gutterAVast, .Grid--gutterVVast {
+  margin-top: -80px; }
+
+.Grid--gutterAVast > .Grid-cell, .Grid--gutterVVast > .Grid-cell {
+  padding-top: 80px; }
+
+/* Descendants
+   ========================================================================== */
+/**
+ * @atdoc descendant
+ * @name cell
+ * @component Grid
+ *
+ * @description
+ * No explicit width by default. Rely on combining `Grid-cell` with a dimension
+ * utility or component that extends `Grid`.
+ *
+ * 1. Fundamentals of the non-float grid layout.
+ * 2. Make cells full-width by default.
+ * 3. Controls vertical positioning of cells.
+ * 4. #no-IE8-drop
+ * 5. Reset font size change made in `Grid`.
+ * 6. Keeps content correctly aligned with the grid direction.
+ */
+.Grid-cell {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  /* 2 */
+  vertical-align: top;
+  /* 3 */
+  font-size: 13px;
+  /* 4 */
+  font-size: 0.8125rem;
+  /* 5 */
+  text-align: left;
+  /* 6 */ }
+
+/* Descendant modifiers
+   ========================================================================== */
+/**
+ * @atdoc descendantModifier
+ * @name fit
+ * @component Grid
+ * @descendant cell
+ *
+ * @description
+ * Make one cell shrink wrap its content.
+ */
+.Grid-cell--fit {
+  width: auto; }
+
+/**
+ * @atdoc descendantModifier
+ * @name center
+ * @component Grid
+ * @descendant cell
+ *
+ * @description
+ * Horizontally center one cell.
+ *
+ * Set a specific cell to be horizontally centered. Doesn't affect
+ * any other cells. The cell has to have `width` specified. Can still contain
+ * a `Grid` component.
+ */
+.Grid-cell--center {
+  display: block;
+  margin-right: auto;
+  margin-left: auto; }
+
+/**
+ * @atdoc descendantModifier
+ * @name right
+ * @component Grid
+ * @descendant cell
+ *
+ * @description
+ * Align cell to right.
+ */
+.Grid-cell--right {
+  display: block;
+  margin-left: auto; }
+
+/* Component modifiers
+   ========================================================================== */
+/**
+ * @atdoc componentModifier
+ * @name 2col
+ * @component Grid
+ *
+ * @description
+ * 2-column grid.
+ */
+.Grid--2col > .Grid-cell {
+  width: 50%; }
+
+/**
+ * @atdoc componentModifier
+ * @name 3col
+ * @component Grid
+ *
+ * @description
+ * 3-column grid.
+ */
+.Grid--3col > .Grid-cell {
+  width: 33.333%; }
+
+/**
+ * @atdoc componentModifier
+ * @name 4col
+ * @component Grid
+ *
+ * @description
+ * 4-column grid.
+ */
+.Grid--4col > .Grid-cell {
+  width: 25%; }
+
+/* Inline axis alignment
+   ========================================================================== */
+/**
+ * Content alignment.
+ *
+ * Flex container: justifies items in its rows.
+ */
+/**
+ * @atdoc utility
+ * @name justifyCStart
+ * @category alignment
+ *
+ * @description
+ * Visualisation: |X|X|X|------|
+ */
+.u-justifyCStart {
+  justify-content: flex-start !important; }
+
+/**
+ * @atdoc utility
+ * @name justifyCCenter
+ * @category alignment
+ *
+ * @description
+ * Visualisation: |---|X|X|X|---|
+ */
+.u-justifyCCenter {
+  justify-content: center !important; }
+
+/**
+ * @atdoc utility
+ * @name justifyCEnd
+ * @category alignment
+ *
+ * @description
+ * Visualisation: |------|X|X|X|
+ */
+.u-justifyCEnd {
+  justify-content: flex-end !important; }
+
+/**
+ * @atdoc utility
+ * @name justifyCBetween
+ * @category alignment
+ *
+ * @description
+ * Visualisation: |X|---|X|---|X|
+ */
+.u-justifyCBetween {
+  justify-content: space-between !important; }
+
+/**
+ * @atdoc utility
+ * @name justifyCAround
+ * @category alignment
+ *
+ * @description
+ * Visualisation: |-|X|--|X|--|X|-|
+ */
+.u-justifyCAround {
+  justify-content: space-around !important; }
+
+/* Stacking (block) axis alignment
+   ========================================================================== */
+/**
+ * Content alignment.
+ *
+ * Flex container: aligns rows.
+ */
+/**
+ * @atdoc utility
+ * @name alignCStart
+ * @category alignment
+ *
+ * @description
+ * Visualisation: |XXXXXXXXXX|
+ *                |YYYYYYYYYY|
+ *                |ZZZZZZZZZZ|
+ *                |----------|
+ *                |----------|
+ *                |----------|
+ *                |----------|
+ *                |----------|
+ *                |----------|
+ */
+.u-alignCStart {
+  align-content: flex-start !important; }
+
+/**
+ * @atdoc utility
+ * @name alignCCenter
+ * @category alignment
+ *
+ * @description
+ * Visualisation: |----------|
+ *                |----------|
+ *                |----------|
+ *                |XXXXXXXXXX|
+ *                |YYYYYYYYYY|
+ *                |ZZZZZZZZZZ|
+ *                |----------|
+ *                |----------|
+ *                |----------|
+ */
+.u-alignCCenter {
+  align-content: center !important; }
+
+/**
+ * @atdoc utility
+ * @name alignCEnd
+ * @category alignment
+ *
+ * @description
+ * Visualisation: |----------|
+ *                |----------|
+ *                |----------|
+ *                |----------|
+ *                |----------|
+ *                |----------|
+ *                |XXXXXXXXXX|
+ *                |YYYYYYYYYY|
+ *                |ZZZZZZZZZZ|
+ */
+.u-alignCEnd {
+  align-content: flex-end !important; }
+
+/**
+ * @atdoc utility
+ * @name alignCBetween
+ * @category alignment
+ *
+ * @description
+ * Visualisation: |XXXXXXXXXX|
+ *                |----------|
+ *                |----------|
+ *                |----------|
+ *                |YYYYYYYYYY|
+ *                |----------|
+ *                |----------|
+ *                |----------|
+ *                |ZZZZZZZZZZ|
+ */
+.u-alignCBetween {
+  align-content: space-between !important; }
+
+/**
+ * @atdoc utility
+ * @name alignCAround
+ * @category alignment
+ *
+ * @description
+ * Visualisation: |----------|
+ *                |XXXXXXXXXX|
+ *                |----------|
+ *                |----------|
+ *                |YYYYYYYYYY|
+ *                |----------|
+ *                |----------|
+ *                |ZZZZZZZZZZ|
+ *                |----------|
+ */
+.u-alignCAround {
+  align-content: space-around !important; }
+
+/**
+ * @atdoc utility
+ * @name alignCStretch
+ * @category alignment
+ *
+ * @description
+ * Visualisation: |XXXXXXXXXX|
+ *                |XXXXXXXXXX|
+ *                |XXXXXXXXXX|
+ *                |YYYYYYYYYY|
+ *                |YYYYYYYYYY|
+ *                |YYYYYYYYYY|
+ *                |ZZZZZZZZZZ|
+ *                |ZZZZZZZZZZ|
+ *                |ZZZZZZZZZZ|
+ */
+.u-alignCStretch {
+  align-content: stretch !important; }
+
+/**
+ * Items alignment.
+ *
+ * Flex container: aligns items in rows.
+ */
+/**
+ * @atdoc utility
+ * @name alignIStart
+ * @category alignment
+ *
+ * @description
+ * Visualisation: |-|X|-|Y|-|Z|-|
+ *                |-|X|-----|Z|-|
+ *                |-|X|-----|Z|-|
+ *                |---------|Z|-|
+ *                |---------|Z|-|
+ */
+.u-alignIStart {
+  align-items: flex-start !important; }
+
+/**
+ * @atdoc utility
+ * @name alignSStart
+ * @category alignment
+ *
+ * @description
+ * Same as for `alignIStart`, but for a single element.
+ */
+.u-alignSStart {
+  align-self: flex-start !important; }
+
+/**
+ * @atdoc utility
+ * @name alignICenter
+ * @category alignment
+ *
+ * @description
+ * Visualisation: |---------|Z|-|
+ *                |-|X|-----|Z|-|
+ *                |-|X|-|Y|-|Z|-|
+ *                |-|X|-----|Z|-|
+ *                |---------|Z|-|
+ */
+.u-alignICenter {
+  align-items: center !important; }
+
+/**
+ * @atdoc utility
+ * @name alignSCenter
+ * @category alignment
+ *
+ * @description
+ * Same as for `alignICenter`, but for a single element.
+ */
+.u-alignSCenter {
+  align-self: center !important; }
+
+/**
+ * @atdoc utility
+ * @name alignIEnd
+ * @category alignment
+ *
+ * @description
+ * Visualisation: |---------|Z|-|
+ *                |---------|Z|-|
+ *                |-|X|-----|Z|-|
+ *                |-|X|-----|Z|-|
+ *                |-|X|-|Y|-|Z|-|
+ */
+.u-alignIEnd {
+  align-items: flex-end !important; }
+
+/**
+ * @atdoc utility
+ * @name alignSEnd
+ * @category alignment
+ *
+ * @description
+ * Same as for `alignIEnd`, but for a single element.
+ */
+.u-alignSEnd {
+  align-self: flex-end !important; }
+
+/**
+ * @atdoc utility
+ * @name alignIStretch
+ * @category alignment
+ *
+ * @description
+ * Visualisation: |-|X|-|Y|-|Z|-|
+ *                |-|X|-|Y|-|Z|-|
+ *                |-|X|-|Y|-|Z|-|
+ *                |-|X|-|Y|-|Z|-|
+ *                |-|X|-|Y|-|Z|-|
+ */
+.u-alignIStretch {
+  align-items: stretch !important; }
+
+/**
+ * @atdoc utility
+ * @name alignSStretch
+ * @category alignment
+ *
+ * @description
+ * Same as for `alignIStretch`, but for a single element.
+ */
+.u-alignSStretch {
+  align-self: stretch !important; }
+
+/* Margin distribution
+   ========================================================================== */
+/**
+ * Works for:
+ * - Flex items
+ * - Absolutely positioned elements with width and height defined
+ */
+/**
+ * @atdoc utility
+ * @name sendLeft
+ * @category alignment
+ *
+ * @description
+ * Distribute free horizontal space to right margin, aligning the subject
+ * to left.
+ */
+.u-sendLeft {
+  margin-right: auto !important; }
+
+/**
+ * @atdoc utility
+ * @name sendRight
+ * @category alignment
+ *
+ * @description
+ * Distribute free horizontal space to left margin, aligning the subject
+ * to right.
+ */
+.u-sendRight {
+  margin-left: auto !important; }
+
+/**
+ * @atdoc utility
+ * @name sendBottom
+ * @category alignment
+ *
+ * @description
+ * Distribute free vertical space to top margin, aligning the subject to bottom.
+ */
+.u-sendBottom {
+  margin-top: auto !important; }
+
+/**
+ * @atdoc utility
+ * @name sendTop
+ * @category alignment
+ *
+ * @description
+ * Distribute free vertical space to bottom margin, aligning the subject to top.
+ */
+.u-sendTop {
+  margin-bottom: auto !important; }
+
+/**
+ * @atdoc utility
+ * @name centerize
+ * @category alignment
+ *
+ * @description
+ * Distribute free vertical and horizontal space to all margins equally,
+ * centering the subject both horizontally and vertically.
+ */
+.u-centerize {
+  margin: auto !important; }
+
+/**
+ * @atdoc utility
+ * @name centerizeHorizontally
+ * @category alignment
+ *
+ * @description
+ * Distribute free horizontal space to left and right margin equally, centering
+ * the subject horizontally.
+ */
+.u-centerizeHorizontally {
+  margin-left: auto !important;
+  margin-right: auto !important; }
+
+/**
+ * @atdoc utility
+ * @name centerizeVertically
+ * @category alignment
+ *
+ * @description
+ * Distribute free vertical space to top and bottom margin equally, centering
+ * the subject vertically.
+ */
+.u-centerizeVertically {
+  margin-top: auto !important;
+  margin-bottom: auto !important; }
+
+/* Intrinsic widths
+   ========================================================================== */
+/**
+ * @atdoc utility
+ * @name sizeAuto
+ * @category dimension
+ *
+ * @description
+ * Make an element fit its content.
+ *
+ */
+.u-sizeAuto {
+  width: auto !important; }
+
+/* Proportional widths
+   ========================================================================== */
+/**
+ * Specify the proportional width of an object
+ *
+ * Intentional redundancy built into each set of unit classes.
+ * Supports: 2, 3, 4, 5, 6, 8, 10, 12 part
+ */
+/**
+ * @atdoc utility
+ * @name size1of12
+ * @category dimension
+ *
+ * @description
+ * Make an element 1 / 12 the width of its parent.
+ */
+.u-size1of12 {
+  width: 8.333% !important; }
+
+/**
+ * @atdoc utility
+ * @name size1of10
+ * @category dimension
+ *
+ * @description
+ * Make an element 1 / 10 the width of its parent.
+ */
+.u-size1of10 {
+  width: 10% !important; }
+
+/**
+ * @atdoc utility
+ * @name size1of8
+ * @category dimension
+ *
+ * @description
+ * Make an element 1 / 8 the width of its parent.
+ */
+.u-size1of8 {
+  width: 12.5% !important; }
+
+/**
+ * @atdoc utility
+ * @name size1of6
+ * @alias size2of12
+ * @category dimension
+ *
+ * @description
+ * Make an element 1 / 6 the width of its parent.
+ */
+.u-size1of6, .u-size2of12 {
+  width: 16.667% !important; }
+
+/**
+ * @atdoc utility
+ * @name size1of5
+ * @alias size2of10
+ * @category dimension
+ *
+ * @description
+ * Make an element 1 / 5 the width of its parent.
+ */
+.u-size1of5, .u-size2of10 {
+  width: 20% !important; }
+
+/**
+ * @atdoc utility
+ * @name size1of4
+ * @alias size2of8, size3of12
+ * @category dimension
+ *
+ * @description
+ * Make an element 1 / 4 the width of its parent.
+ */
+.u-size1of4, .u-size2of8, .u-size3of12 {
+  width: 25% !important; }
+
+/**
+ * @atdoc utility
+ * @name size3of10
+ * @category dimension
+ *
+ * @description
+ * Make an element 3 / 10 the width of its parent.
+ */
+.u-size3of10 {
+  width: 30% !important; }
+
+/**
+ * @atdoc utility
+ * @name size1of3
+ * @alias size2of6, size4of12
+ * @category dimension
+ *
+ * @description
+ * Make an element 1 / 3 the width of its parent.
+ */
+.u-size1of3, .u-size2of6, .u-size4of12 {
+  width: 33.333% !important; }
+
+/**
+ * @atdoc utility
+ * @name size3of8
+ * @category dimension
+ *
+ * @description
+ * Make an element 3 / 8 the width of its parent.
+ */
+.u-size3of8 {
+  width: 37.5% !important; }
+
+/**
+ * @atdoc utility
+ * @name size2of5
+ * @alias size4of10
+ * @category dimension
+ *
+ * @description
+ * Make an element 2 / 5 the width of its parent.
+ */
+.u-size2of5, .u-size4of10 {
+  width: 40% !important; }
+
+/**
+ * @atdoc utility
+ * @name size5of12
+ * @category dimension
+ *
+ * @description
+ * Make an element 5 / 12 the width of its parent.
+ */
+.u-size5of12 {
+  width: 41.667% !important; }
+
+/**
+ * @atdoc utility
+ * @name size1of2
+ * @alias size2of4, size3of6, size4of8, size5of10, size6of12
+ * @category dimension
+ *
+ * @description
+ * Make an element 1 / 2 the width of its parent.
+ */
+.u-size1of2, .u-size2of4, .u-size3of6, .u-size4of8, .u-size5of10, .u-size6of12 {
+  width: 50% !important; }
+
+/**
+ * @atdoc utility
+ * @name size7of12
+ * @category dimension
+ *
+ * @description
+ * Make an element 7 / 12 the width of its parent.
+ */
+.u-size7of12 {
+  width: 58.333% !important; }
+
+/**
+ * @atdoc utility
+ * @name size3of5
+ * @alias size6of10
+ * @category dimension
+ *
+ * @description
+ * Make an element 3 / 5 the width of its parent.
+ */
+.u-size3of5, .u-size6of10 {
+  width: 60% !important; }
+
+/**
+ * @atdoc utility
+ * @name size5of8
+ * @category dimension
+ *
+ * @description
+ * Make an element 5 / 8 the width of its parent.
+ */
+.u-size5of8 {
+  width: 62.5% !important; }
+
+/**
+ * @atdoc utility
+ * @name size2of3
+ * @alias size4of6, size8of12
+ * @category dimension
+ *
+ * @description
+ * Make an element 2 / 3 the width of its parent.
+ */
+.u-size2of3, .u-size4of6, .u-size8of12 {
+  width: 66.667% !important; }
+
+/**
+ * @atdoc utility
+ * @name size7of10
+ * @category dimension
+ *
+ * @description
+ * Make an element 7 / 10 the width of its parent.
+ */
+.u-size7of10 {
+  width: 70% !important; }
+
+/**
+ * @atdoc utility
+ * @name size3of4
+ * @alias size6of8, size9of12
+ * @category dimension
+ *
+ * @description
+ * Make an element 3 / 4 the width of its parent.
+ */
+.u-size3of4, .u-size6of8, .u-size9of12 {
+  width: 75% !important; }
+
+/**
+ * @atdoc utility
+ * @name size4of5
+ * @alias size8of10
+ * @category dimension
+ *
+ * @description
+ * Make an element 4 / 5 the width of its parent.
+ */
+.u-size4of5, .u-size8of10 {
+  width: 80% !important; }
+
+/**
+ * @atdoc utility
+ * @name size5of6
+ * @alias size10of12
+ * @category dimension
+ *
+ * @description
+ * Make an element 5 / 6 the width of its parent.
+ */
+.u-size5of6, .u-size10of12 {
+  width: 83.333% !important; }
+
+/**
+ * @atdoc utility
+ * @name size7of8
+ * @category dimension
+ *
+ * @description
+ * Make an element 7 / 8 the width of its parent.
+ */
+.u-size7of8 {
+  width: 87.5% !important; }
+
+/**
+ * @atdoc utility
+ * @name size9of10
+ * @category dimension
+ *
+ * @description
+ * Make an element 9 / 10 the width of its parent.
+ */
+.u-size9of10 {
+  width: 90% !important; }
+
+/**
+ * @atdoc utility
+ * @name size11of12
+ * @category dimension
+ *
+ * @description
+ * Make an element 11 / 12 the width of its parent.
+ */
+.u-size11of12 {
+  width: 91.667% !important; }
+
+/**
+ * @atdoc utility
+ * @name size1of1
+ * @category dimension
+ *
+ * @description
+ * Make an element fill the width of its parent.
+ */
+.u-size1of1 {
+  width: 100% !important; }
+
+/**
+ * @atdoc utility
+ * @name flexOne
+ * @category dimension
+ *
+ * @description
+ * Grow by a factor of 1, regardless of intrinsic width.
+ */
+.u-flexOne {
+  flex: 1 !important; }
+
+/**
+ * @atdoc utility
+ * @name flexAuto
+ * @category dimension
+ *
+ * @description
+ * Grow and shrink by a factor of 1, regardless of intrinsic width.
+ */
+.u-flexAuto {
+  flex: auto !important; }
+
+/**
+ * @atdoc utility
+ * @name flexNone
+ * @category dimension
+ *
+ * @description
+ * Disable flexible size.
+ */
+.u-flexNone {
+  flex: none !important; }
+
+/**
+ * @atdoc utility
+ * @name sizingBorderBox
+ * @category dimension
+ *
+ * @description
+ * Include border and padding to width calculation.
+ */
+.u-sizingBorderBox {
+  box-sizing: border-box; }
+
+/**
+ * @atdoc utility
+ * @name inline
+ * @category display
+ *
+ * @description
+ * Display element as inline.
+ */
+.u-inline {
+  display: inline !important; }
+
+/**
+ * @atdoc utility
+ * @name inlineBlock
+ * @category display
+ *
+ * @description
+ * Display element as inline block.
+ */
+.u-inlineBlock {
+  display: inline-block !important; }
+
+/**
+ * @atdoc utility
+ * @name block
+ * @category display
+ *
+ * @description
+ * Display element as block.
+ */
+.u-block {
+  display: block !important; }
+
+/**
+ * @atdoc utility
+ * @name table
+ * @category display
+ *
+ * @description
+ * Display element as table.
+ */
+.u-table {
+  display: table !important; }
+
+/**
+ * @atdoc utility
+ * @name tableCell
+ * @category display
+ *
+ * @description
+ * Display element as table cell.
+ */
+.u-tableCell {
+  display: table-cell !important; }
+
+/**
+ * @atdoc utility
+ * @name flex
+ * @category display
+ *
+ * @description
+ * Display element as flexible box.
+ */
+.u-flex {
+  display: flex !important; }
+
+/**
+ * @atdoc utility
+ * @name inlineFlex
+ * @category display
+ *
+ * @description
+ * Display element as inline flexible box.
+ */
+.u-inlineFlex {
+  display: inline-flex !important; }
+
+/**
+ * @atdoc utility
+ * @name imageReplace
+ * @category image
+ *
+ * @description
+ * Image replacement technique, see http://bit.ly/NgnSfH for details.
+ *
+ * 1. If the IR'ed element has bottom-padding, then either it needs to be
+ *    removed or the height needs to be bumped up (e.g., set to 200%).
+ */
+.u-imageReplace {
+  overflow: hidden !important;
+  border: 0 !important;
+  background-color: transparent !important;
+  background-repeat: no-repeat !important; }
+
+/* 1 */
+.u-imageReplace:before {
+  content: "" !important;
+  display: block !important;
+  width: 0 !important;
+  height: 150% !important; }
+
+/**
+ * @atdoc utility
+ * @name imageResponsive
+ * @category image
+ *
+ * @description
+ * Image that scales down on narrower screens.
+ *
+ * 1. Maximum width of its parent.
+ * 2. Remove the gap between images and the bottom of their containers.
+ * 3. Scale the height properly ensuring the right ratio.
+ */
+.u-imageResponsive {
+  max-width: 100% !important;
+  /* 1 */
+  vertical-align: middle !important;
+  /* 2 */
+  height: auto !important;
+  /* 3 */ }
+
+/**
+ * @atdoc utility
+ * @name cf
+ * @category layout
+ *
+ * @description
+ * Clearfix.
+ *
+ * Make an element expand to contain floated children.
+ * Uses pseudo-elements (micro clearfix).
+ *
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of the
+ *    element.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.u-cf:before, .u-cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.u-cf:after {
+  clear: both; }
+
+/**
+ * @atdoc utility
+ * @name nbfc
+ *
+ * @description
+ * New block formatting context.
+ *
+ * This affords some useful properties to the element. It won't wrap under
+ * floats. Will also contain any floated children.
+ *
+ * N.B. This will clip overflow. Use the alternative method below if this is
+ * problematic.
+ */
+.u-nbfc {
+  overflow: hidden !important; }
+
+/**
+ * @atdoc utility
+ * @name nbfcAlt
+ *
+ * @description
+ * New block formatting context (alternative).
+ *
+ * Alternative method when overflow must not be clipped.
+ *
+ * 1. Create a new block formatting context (NBFC).
+ * 2. Avoid shrink-wrap behaviour of table-cell.
+ *
+ * N.B. This breaks down in some browsers when elements within this element
+ * exceed its width.
+ */
+.u-nbfcAlt {
+  display: table-cell !important;
+  /* 1 */
+  width: 10000px !important;
+  /* 2 */ }
+
+/**
+ * @atdoc utility
+ * @name overflowAuto
+ *
+ * @description
+ * Auto overflow.
+ */
+.u-overflowAuto {
+  overflow: auto; }
+
+/**
+ * @atdoc utility
+ * @name pullLeft
+ *
+ * @description
+ * Float an element to left.
+ */
+.u-pullLeft {
+  float: left !important; }
+
+/**
+ * @atdoc utility
+ * @name pullRight
+ *
+ * @description
+ * Float an element to right.
+ */
+.u-pullRight {
+  float: right !important; }
+
+/**
+ * @atdoc utility
+ * @name blockCenter
+ *
+ * @description
+ * Horizontally center a block-level element with a specified width.
+ */
+.u-blockCenter {
+  margin-right: auto !important;
+  margin-left: auto !important; }
+
+/**
+ * @atdoc utility
+ * @name blockRight
+ *
+ * @description
+ * Align a block-level element with a specified width to right.
+ */
+.u-blockRight {
+  margin-left: auto !important; }
+
+/**
+ * Vertical alignment depends on an appropriate `display` value. #no-IE9-replace
+ */
+/**
+ * @atdoc utility
+ * @name alignTop
+ *
+ * @description
+ * Set vertical alignment to `top`.
+ */
+.u-alignTop {
+  vertical-align: top !important; }
+
+/**
+ * @atdoc utility
+ * @name alignMiddle
+ *
+ * @description
+ * Set vertical alignment to `middle`.
+ */
+.u-alignMiddle {
+  vertical-align: middle !important; }
+
+/**
+ * @atdoc utility
+ * @name alignBaseline
+ *
+ * @description
+ * Set vertical alignment to `baseline`.
+ */
+.u-alignBaseline {
+  vertical-align: baseline !important; }
+
+/**
+ * @atdoc utility
+ * @name alignBottom
+ *
+ * @description
+ * Set vertical alignment to `bottom`.
+ */
+.u-alignBottom {
+  vertical-align: bottom !important; }
+
+/**
+ * @atdoc utility
+ * @name relative
+ *
+ * @description
+ * Sets relative position.
+ */
+.u-relative {
+  position: relative !important; }
+
+/**
+ * @atdoc utility
+ * @name absolute
+ *
+ * @description
+ * Sets absolute position.
+ */
+.u-absolute {
+  position: absolute !important; }
+
+/**
+ * @atdoc utility
+ * @name absoluteCenter
+ *
+ * @description
+ * Centers the element via absolute positioning.
+ * Needs to have `width` and `height` explicitly set.
+ */
+.u-absoluteCenter {
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  margin: auto !important; }
+
+/**
+ * Stick with `small`, `medium` and `large` keywords if you create a new
+ * utility. They should correspond to `5px`, `10px`, and `20px`, respectively.
+ */
+/**
+ * @atdoc utility
+ * @name paddingNone
+ * @category padding
+ * @category spacing
+ *
+ * @description
+ * Sets `padding` to zero.
+ *
+ * @example
+ * * Used to nullify `padding` on an element.
+ */
+.u-paddingNone {
+  padding: 0 !important; }
+
+/**
+ * @atdoc utility
+ * @name paddingBNone
+ * @category padding
+ * @category spacing
+ *
+ * @description
+ * Sets `padding-bottom` to zero.
+ *
+ * @example
+ * * Used to nullify `padding-bottom` on an element.
+ */
+.u-paddingBNone {
+  padding-bottom: 0 !important; }
+
+/**
+ * @atdoc utility
+ * @name paddingBSmall
+ * @category padding
+ * @category spacing
+ *
+ * @description
+ * Sets `padding-bottom` to 5px.
+ *
+ * @example
+ * * Used to set `padding-bottom` on an element.
+ */
+.u-paddingBSmall {
+  padding-bottom: 5px !important; }
+
+/**
+ * @atdoc utility
+ * @name paddingBMedium
+ * @category padding
+ * @category spacing
+ *
+ * @description
+ * Sets `padding-bottom` to 10px.
+ *
+ * @example
+ * * Used to set `padding-bottom` on an element.
+ */
+.u-paddingBMedium {
+  padding-bottom: 10px !important; }
+
+/**
+ * @atdoc utility
+ * @name paddingBLarge
+ * @category padding
+ * @category spacing
+ *
+ * @description
+ * Sets `padding-bottom` to 20px.
+ *
+ * @example
+ * * Used to set `padding-bottom` on an element.
+ */
+.u-paddingBLarge {
+  padding-bottom: 20px !important; }
+
+/**
+ * @atdoc utility
+ * @name paddingBHuge
+ * @category padding
+ * @category spacing
+ *
+ * @description
+ * Sets `padding-bottom` to 40px.
+ *
+ * @example
+ * * Used to set `padding-bottom` on an element.
+ */
+.u-paddingBHuge {
+  padding-bottom: 40px !important; }
+
+/**
+ * @atdoc utility
+ * @name paddingBEnormous
+ * @category padding
+ * @category spacing
+ *
+ * @description
+ * Sets `padding-bottom` to 60px.
+ *
+ * @example
+ * * Used to set `padding-bottom` on an element.
+ */
+.u-paddingBEnormous {
+  padding-bottom: 60px !important; }
+
+/**
+ * @atdoc utility
+ * @name paddingBExtensive
+ * @category padding
+ * @category spacing
+ *
+ * @description
+ * Sets `padding-bottom` to 100px.
+ *
+ * @example
+ * * Used to set `padding-bottom` on an element.
+ */
+.u-paddingBExtensive {
+  padding-bottom: 100px !important; }
+
+/**
+ * @atdoc utility
+ * @name paddingTNone
+ * @category padding
+ * @category spacing
+ *
+ * @description
+ * Sets `padding-top` to zero.
+ *
+ * @example
+ * * Used to nullify `padding-top` on an element.
+ */
+.u-paddingTNone {
+  padding-top: 0 !important; }
+
+/**
+ * @atdoc utility
+ * @name paddingTSmall
+ * @category padding
+ * @category spacing
+ *
+ * @description
+ * Sets `padding-top` to 5px.
+ *
+ * @example
+ * * Used to set `padding-top` on an element.
+ */
+.u-paddingTSmall {
+  padding-top: 5px !important; }
+
+/**
+ * @atdoc utility
+ * @name paddingTMedium
+ * @category padding
+ * @category spacing
+ *
+ * @description
+ * Sets `padding-top` to 10px.
+ *
+ * @example
+ * * Used to set `padding-top` on an element.
+ */
+.u-paddingTMedium {
+  padding-top: 10px !important; }
+
+/**
+ * @atdoc utility
+ * @name paddingTLarge
+ * @category padding
+ * @category spacing
+ *
+ * @description
+ * Sets `padding-top` to 20px.
+ *
+ * @example
+ * * Used to set `padding-top` on an element.
+ */
+.u-paddingTLarge {
+  padding-top: 20px !important; }
+
+/**
+ * @atdoc utility
+ * @name paddingTHuge
+ * @category padding
+ * @category spacing
+ *
+ * @description
+ * Sets `padding-top` to 40px.
+ *
+ * @example
+ * * Used to set `padding-top` on an element.
+ */
+.u-paddingTHuge {
+  padding-top: 40px !important; }
+
+/**
+ * @atdoc utility
+ * @name paddingTEnormous
+ * @category padding
+ * @category spacing
+ *
+ * @description
+ * Sets `padding-top` to 60px.
+ *
+ * @example
+ * * Used to set `padding-top` on an element.
+ */
+.u-paddingTEnormous {
+  padding-top: 60px !important; }
+
+/**
+ * @atdoc utility
+ * @name paddingTExtensive
+ * @category padding
+ * @category spacing
+ *
+ * @description
+ * Sets `padding-top` to 100px.
+ *
+ * @example
+ * * Used to set `padding-top` on an element.
+ */
+.u-paddingTExtensive {
+  padding-top: 100px !important; }
+
+/**
+ * @atdoc utility
+ * @name paddingLRegular
+ * @category padding
+ * @category spacing
+ *
+ * @description
+ * Sets left `padding` to regular size.
+ */
+.u-paddingLRegular {
+  padding-left: 15px !important; }
+
+/**
+ * @atdoc utility
+ * @name marginNone
+ * @category margin
+ * @category spacing
+ *
+ * @description
+ * Sets `margin` to zero.
+ *
+ * @example
+ * * Used to nullify `margin` on an element.
+ */
+.u-marginNone {
+  margin: 0 !important; }
+
+/**
+ * @atdoc utility
+ * @name outdentSmall
+ * @category outdent
+ * @category spacing
+ *
+ * @description
+ * Outdents by small size.
+ */
+.u-outdentSmall {
+  margin-right: 5px !important; }
+
+/**
+ * @atdoc utility
+ * @name outdentMedium
+ * @category outdent
+ * @category spacing
+ *
+ * @description
+ * Outdents by medium size.
+ */
+.u-outdentMedium {
+  margin-right: 10px !important; }
+
+/**
+ * @atdoc utility
+ * @name outdentRegular
+ * @category outdent
+ * @category spacing
+ *
+ * @description
+ * Outdents by regular size.
+ */
+.u-outdentRegular {
+  margin-right: 15px !important; }
+
+/**
+ * @atdoc utility
+ * @name leadingNone
+ * @category spacing
+ *
+ * @description
+ * Sets element's top vertical spacing to regular size.
+ */
+.u-leadingRegular {
+  margin-top: 15px !important; }
+
+/**
+ * @atdoc utility
+ * @name spacingNone
+ * @category spacing
+ *
+ * @description
+ * Sets element's bottom vertical spacing to zero.
+ */
+.u-spacingNone {
+  margin-bottom: 0 !important; }
+
+/**
+ * @atdoc utility
+ * @name spacingSmall
+ * @category spacing
+ *
+ * @description
+ * Sets element's bottom vertical spacing to small size.
+ */
+.u-spacingSmall {
+  margin-bottom: 5px !important; }
+
+/**
+ * @atdoc utility
+ * @name spacingMedium
+ * @category spacing
+ *
+ * @description
+ * Sets element's bottom vertical spacing to medium size.
+ */
+.u-spacingMedium {
+  margin-bottom: 10px !important; }
+
+/**
+ * @atdoc utility
+ * @name spacingLarge
+ * @category spacing
+ *
+ * @description
+ * Sets element's bottom vertical spacing to large size.
+ */
+.u-spacingLarge {
+  margin-bottom: 20px !important; }
+
+/**
+ * @atdoc utility
+ * @name spacingHuge
+ * @category spacing
+ *
+ * @description
+ * Sets element's bottom vertical spacing to huge size.
+ */
+.u-spacingHuge {
+  margin-bottom: 40px !important; }
+
+/**
+ * @atdoc utility
+ * @name spacingEnormous
+ * @category spacing
+ *
+ * @description
+ * Sets element's bottom vertical spacing to enormous size.
+ */
+.u-spacingEnormous {
+  margin-bottom: 60px !important; }
+
+/**
+ * @atdoc utility
+ * @name spacingExtensive
+ * @category spacing
+ *
+ * @description
+ * Sets element's bottom vertical spacing to extensive size.
+ */
+.u-spacingExtensive {
+  margin-bottom: 100px !important; }
+
+/**
+ * @atdoc utility
+ * @name isHidden
+ *
+ * @description
+ * Completely remove from the flow and screen readers.
+ */
+.u-isHidden {
+  display: none !important;
+  visibility: hidden !important; }
+
+/**
+ * @atdoc utility
+ * @name isHiddenVisually
+ *
+ * @description
+ * Completely remove from the flow but leave available to screen readers.
+ */
+.u-isHiddenVisually {
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  padding: 0 !important;
+  width: 1px !important;
+  height: 1px !important;
+  border: 0 !important; }
+
+/**
+ * @atdoc utility
+ * @name isVisible
+ *
+ * @description
+ * Control visibility without affecting flow.
+ */
+.u-isVisible {
+  visibility: visible !important; }
+
+/**
+ * @atdoc utility
+ * @name isInvisible
+ *
+ * @description
+ * Control visibility without affecting flow.
+ */
+.u-isInvisible {
+  visibility: hidden !important; }
+
+/* Interaction
+   ========================================================================== */
+/**
+ * @atdoc utility
+ * @name isActionable
+ *
+ * @description
+ * Indicate that the element is interactive.
+ */
+.u-isActionable {
+  cursor: pointer !important; }
+
+/**
+ * @atdoc utility
+ * @name isDraggable
+ *
+ * @description
+ * Indicate that the element is draggable.
+ */
+.u-isDraggable {
+  cursor: move !important; }
+
+/**
+ * @atdoc utility
+ * @name isDisabled
+ *
+ * @description
+ * Indicate that the element is not interactive.
+ */
+.u-isDisabled {
+  cursor: default !important; }
+
+/**
+ * @atdoc utility
+ * @name isUnselectable
+ *
+ * @description
+ * Prevent selection on the element.
+ */
+.u-isUnselectable {
+  user-select: none !important; }
+
+/**
+ * @atdoc utility
+ * @name textTruncate
+ * @category text
+ *
+ * @description
+ * Prevent text from wrapping onto multiple lines, and truncate with an
+ * ellipsis.
+ *
+ * 1. Ensure that the node has a maximum width after which truncation can
+ *    occur.
+ * 2. Fix for IE 8/9 if `word-wrap: break-word` is in effect on ancestor
+ *    nodes.
+ *
+ * @example
+  <example module="textTruncateExample>
+    <file name="index.html">
+      <p class="u-textTruncate">
+        Sed posuere consectetur est at lobortis.
+      </p>
+    </file>
+  </example>
+ */
+.u-textTruncate {
+  overflow: hidden !important;
+  max-width: 100% !important;
+  /* 1 */
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  word-wrap: normal !important;
+  /* 2 */ }
+
+/**
+ * @atdoc utility
+ * @name textBreak
+ * @category text
+ *
+ * @description
+ * Break strings when their length exceeds the width of their container.
+ *
+ * @example
+  <example module="textTruncateExample>
+    <file name="index.html">
+      <p class="u-textBreak">
+        <a href="#">
+         https://github.com/bits-sass/utils-text
+        </a>
+      </p>
+    </file>
+  </example>
+ */
+.u-textBreak {
+  word-wrap: break-word !important; }
+
+/**
+ * @atdoc utility
+ * @name textNoWrap
+ * @category text
+ *
+ * @description
+ * Prevent whitespace wrapping.
+ */
+.u-textNoWrap {
+  white-space: nowrap !important; }
+
+/**
+ * @atdoc utility
+ * @name weightLight
+ * @category text
+ *
+ * @description
+ * Use light-weighted font.
+ */
+.u-weightLight {
+  font-weight: 100 !important; }
+
+/**
+ * @atdoc utility
+ * @name weightRegular
+ * @category text
+ *
+ * @description
+ * Use regular-weighted font.
+ */
+.u-weightRegular {
+  font-weight: 400 !important; }
+
+/**
+ * @atdoc utility
+ * @name weightBold
+ * @category text
+ *
+ * @description
+ * Use bold-weighted font.
+ */
+.u-weightBold {
+  font-weight: 700 !important; }
+
+/**
+ * @atdoc utility
+ * @name textLeft
+ * @category alignment
+ * @category text
+ *
+ * @description
+ * Align text to left.
+ */
+.u-textLeft {
+  text-align: left !important; }
+
+/**
+ * @atdoc utility
+ * @name textCenter
+ * @category alignment
+ * @category text
+ *
+ * @description
+ * Center the text.
+ */
+.u-textCenter {
+  text-align: center !important; }
+
+/**
+ * @atdoc utility
+ * @name textRight
+ * @category alignment
+ * @category text
+ *
+ * @description
+ * Align text to right.
+ */
+.u-textRight {
+  text-align: right !important; }
+
+/**
+ * @atdoc utility
+ * @name textInheritColor
+ * @category color
+ * @category text
+ *
+ * @description
+ * Inherit the ancestor's text color.
+ */
+.u-textInheritColor {
+  color: inherit !important; }
+
+/**
+ * @atdoc utility
+ * @name textInheritAllColor
+ * @category color
+ * @category text
+ *
+ * @description
+ * Inherit the ancestor's text color for all states.
+ */
+.u-textInheritAllColor, .u-textInheritAllColor:hover, .u-textInheritAllColor:focus, .u-textInheritAllColor:active {
+  color: inherit !important; }
+
+/**
+ * @atdoc utility
+ * @name textUnderlined
+ * @category text
+ *
+ * @description
+ * Decorate text as underlined.
+ */
+.u-textUnderlined {
+  text-decoration: underline !important; }
+
+/**
+ * @atdoc utility
+ * @name textUpperCase
+ * @category text
+ *
+ * @description
+ * Transform text to upper case.
+ */
+.u-textUpperCase {
+  text-transform: uppercase !important; }
+
+/**
+ * @atdoc utility
+ * @name textLowerCase
+ * @category text
+ *
+ * @description
+ * Transform text to lower case.
+ */
+.u-textLowerCase {
+  text-transform: lowercase !important; }
+
+/**
+ * @atdoc utility
+ * @name textLineHeightMatch
+ * @category text
+ *
+ * @description
+ * Make line height of text match its font size.
+ */
+.u-textLineHeightMatch {
+  line-height: 1 !important; }
+
+.u-textGreen {
+  color: #859900; }
+
+.u-textRed {
+  color: #dc322f; }

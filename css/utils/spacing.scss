@@ -1,0 +1,410 @@
+/**
+ * Stick with `small`, `medium` and `large` keywords if you create a new
+ * utility. They should correspond to `5px`, `10px`, and `20px`, respectively.
+ */
+
+/**
+ * @atdoc utility
+ * @name paddingNone
+ * @category padding
+ * @category spacing
+ *
+ * @description
+ * Sets `padding` to zero.
+ *
+ * @example
+ * * Used to nullify `padding` on an element.
+ */
+.u-paddingNone {
+  padding: 0 !important;
+}
+
+/**
+ * @atdoc utility
+ * @name paddingBNone
+ * @category padding
+ * @category spacing
+ *
+ * @description
+ * Sets `padding-bottom` to zero.
+ *
+ * @example
+ * * Used to nullify `padding-bottom` on an element.
+ */
+.u-paddingBNone {
+  padding-bottom: 0 !important;
+}
+
+/**
+ * @atdoc utility
+ * @name paddingBSmall
+ * @category padding
+ * @category spacing
+ *
+ * @description
+ * Sets `padding-bottom` to 5px.
+ *
+ * @example
+ * * Used to set `padding-bottom` on an element.
+ */
+.u-paddingBSmall {
+  padding-bottom: 5px !important;
+}
+
+/**
+ * @atdoc utility
+ * @name paddingBMedium
+ * @category padding
+ * @category spacing
+ *
+ * @description
+ * Sets `padding-bottom` to 10px.
+ *
+ * @example
+ * * Used to set `padding-bottom` on an element.
+ */
+.u-paddingBMedium {
+  padding-bottom: 10px !important;
+}
+
+/**
+ * @atdoc utility
+ * @name paddingBLarge
+ * @category padding
+ * @category spacing
+ *
+ * @description
+ * Sets `padding-bottom` to 20px.
+ *
+ * @example
+ * * Used to set `padding-bottom` on an element.
+ */
+.u-paddingBLarge {
+  padding-bottom: 20px !important;
+}
+
+/**
+ * @atdoc utility
+ * @name paddingBHuge
+ * @category padding
+ * @category spacing
+ *
+ * @description
+ * Sets `padding-bottom` to 40px.
+ *
+ * @example
+ * * Used to set `padding-bottom` on an element.
+ */
+.u-paddingBHuge {
+  padding-bottom: 40px !important;
+}
+
+/**
+ * @atdoc utility
+ * @name paddingBEnormous
+ * @category padding
+ * @category spacing
+ *
+ * @description
+ * Sets `padding-bottom` to 60px.
+ *
+ * @example
+ * * Used to set `padding-bottom` on an element.
+ */
+.u-paddingBEnormous {
+  padding-bottom: 60px !important;
+}
+
+/**
+ * @atdoc utility
+ * @name paddingBExtensive
+ * @category padding
+ * @category spacing
+ *
+ * @description
+ * Sets `padding-bottom` to 100px.
+ *
+ * @example
+ * * Used to set `padding-bottom` on an element.
+ */
+.u-paddingBExtensive {
+  padding-bottom: 100px !important;
+}
+
+
+/**
+ * @atdoc utility
+ * @name paddingTNone
+ * @category padding
+ * @category spacing
+ *
+ * @description
+ * Sets `padding-top` to zero.
+ *
+ * @example
+ * * Used to nullify `padding-top` on an element.
+ */
+.u-paddingTNone {
+  padding-top: 0 !important;
+}
+
+/**
+ * @atdoc utility
+ * @name paddingTSmall
+ * @category padding
+ * @category spacing
+ *
+ * @description
+ * Sets `padding-top` to 5px.
+ *
+ * @example
+ * * Used to set `padding-top` on an element.
+ */
+.u-paddingTSmall {
+  padding-top: 5px !important;
+}
+
+/**
+ * @atdoc utility
+ * @name paddingTMedium
+ * @category padding
+ * @category spacing
+ *
+ * @description
+ * Sets `padding-top` to 10px.
+ *
+ * @example
+ * * Used to set `padding-top` on an element.
+ */
+.u-paddingTMedium {
+  padding-top: 10px !important;
+}
+
+/**
+ * @atdoc utility
+ * @name paddingTLarge
+ * @category padding
+ * @category spacing
+ *
+ * @description
+ * Sets `padding-top` to 20px.
+ *
+ * @example
+ * * Used to set `padding-top` on an element.
+ */
+.u-paddingTLarge {
+  padding-top: 20px !important;
+}
+
+/**
+ * @atdoc utility
+ * @name paddingTHuge
+ * @category padding
+ * @category spacing
+ *
+ * @description
+ * Sets `padding-top` to 40px.
+ *
+ * @example
+ * * Used to set `padding-top` on an element.
+ */
+.u-paddingTHuge {
+  padding-top: 40px !important;
+}
+
+/**
+ * @atdoc utility
+ * @name paddingTEnormous
+ * @category padding
+ * @category spacing
+ *
+ * @description
+ * Sets `padding-top` to 60px.
+ *
+ * @example
+ * * Used to set `padding-top` on an element.
+ */
+.u-paddingTEnormous {
+  padding-top: 60px !important;
+}
+
+/**
+ * @atdoc utility
+ * @name paddingTExtensive
+ * @category padding
+ * @category spacing
+ *
+ * @description
+ * Sets `padding-top` to 100px.
+ *
+ * @example
+ * * Used to set `padding-top` on an element.
+ */
+.u-paddingTExtensive {
+  padding-top: 100px !important;
+}
+
+
+/**
+ * @atdoc utility
+ * @name paddingLRegular
+ * @category padding
+ * @category spacing
+ *
+ * @description
+ * Sets left `padding` to regular size.
+ */
+.u-paddingLRegular {
+  padding-left: 15px !important;
+}
+
+/**
+ * @atdoc utility
+ * @name marginNone
+ * @category margin
+ * @category spacing
+ *
+ * @description
+ * Sets `margin` to zero.
+ *
+ * @example
+ * * Used to nullify `margin` on an element.
+ */
+.u-marginNone {
+  margin: 0 !important;
+}
+
+/**
+ * @atdoc utility
+ * @name outdentSmall
+ * @category outdent
+ * @category spacing
+ *
+ * @description
+ * Outdents by small size.
+ */
+.u-outdentSmall {
+  margin-right: 5px !important;
+}
+
+/**
+ * @atdoc utility
+ * @name outdentMedium
+ * @category outdent
+ * @category spacing
+ *
+ * @description
+ * Outdents by medium size.
+ */
+.u-outdentMedium {
+  margin-right: 10px !important;
+}
+
+/**
+ * @atdoc utility
+ * @name outdentRegular
+ * @category outdent
+ * @category spacing
+ *
+ * @description
+ * Outdents by regular size.
+ */
+.u-outdentRegular {
+  margin-right: 15px !important;
+}
+
+/**
+ * @atdoc utility
+ * @name leadingNone
+ * @category spacing
+ *
+ * @description
+ * Sets element's top vertical spacing to regular size.
+ */
+.u-leadingRegular {
+  margin-top: 15px !important;
+}
+
+/**
+ * @atdoc utility
+ * @name spacingNone
+ * @category spacing
+ *
+ * @description
+ * Sets element's bottom vertical spacing to zero.
+ */
+.u-spacingNone {
+  margin-bottom: 0 !important;
+}
+
+/**
+ * @atdoc utility
+ * @name spacingSmall
+ * @category spacing
+ *
+ * @description
+ * Sets element's bottom vertical spacing to small size.
+ */
+.u-spacingSmall {
+  margin-bottom: 5px !important;
+}
+
+/**
+ * @atdoc utility
+ * @name spacingMedium
+ * @category spacing
+ *
+ * @description
+ * Sets element's bottom vertical spacing to medium size.
+ */
+.u-spacingMedium {
+  margin-bottom: 10px !important;
+}
+
+/**
+ * @atdoc utility
+ * @name spacingLarge
+ * @category spacing
+ *
+ * @description
+ * Sets element's bottom vertical spacing to large size.
+ */
+.u-spacingLarge {
+  margin-bottom: 20px !important;
+}
+
+/**
+ * @atdoc utility
+ * @name spacingHuge
+ * @category spacing
+ *
+ * @description
+ * Sets element's bottom vertical spacing to huge size.
+ */
+.u-spacingHuge {
+  margin-bottom: 40px !important;
+}
+
+/**
+ * @atdoc utility
+ * @name spacingEnormous
+ * @category spacing
+ *
+ * @description
+ * Sets element's bottom vertical spacing to enormous size.
+ */
+.u-spacingEnormous {
+  margin-bottom: 60px !important;
+}
+
+/**
+ * @atdoc utility
+ * @name spacingExtensive
+ * @category spacing
+ *
+ * @description
+ * Sets element's bottom vertical spacing to extensive size.
+ */
+.u-spacingExtensive {
+  margin-bottom: 100px !important;
+}

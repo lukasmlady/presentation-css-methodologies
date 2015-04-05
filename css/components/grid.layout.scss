@@ -1,0 +1,38 @@
+/* Component modifiers
+   ========================================================================== */
+
+/**
+ * @atdoc componentModifier
+ * @name 2col
+ * @component Grid
+ *
+ * @description
+ * 2-column grid.
+ */
+.Grid--2col > .Grid-cell {
+  width: 50%;
+}
+
+/**
+ * @atdoc componentModifier
+ * @name 3col
+ * @component Grid
+ *
+ * @description
+ * 3-column grid.
+ */
+.Grid--3col > .Grid-cell {
+  width: 33.333%;
+}
+
+/**
+ * @atdoc componentModifier
+ * @name 4col
+ * @component Grid
+ *
+ * @description
+ * 4-column grid.
+ */
+.Grid--4col > .Grid-cell {
+  width: 25%;
+}

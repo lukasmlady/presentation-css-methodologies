@@ -1,0 +1,8 @@
+.line {
+  display: block;
+}
+
+.line.focus {
+  transition: background-color 300ms ease-in;
+  background-color: #586e75;
+}

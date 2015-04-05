@@ -1,0 +1,38 @@
+/**
+ * @atdoc utility
+ * @name relative
+ *
+ * @description
+ * Sets relative position.
+ */
+.u-relative {
+  position: relative !important;
+}
+
+/**
+ * @atdoc utility
+ * @name absolute
+ *
+ * @description
+ * Sets absolute position.
+ */
+.u-absolute {
+  position: absolute !important;
+}
+
+/**
+ * @atdoc utility
+ * @name absoluteCenter
+ *
+ * @description
+ * Centers the element via absolute positioning.
+ * Needs to have `width` and `height` explicitly set.
+ */
+.u-absoluteCenter {
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  margin: auto !important;
+}

@@ -1,0 +1,389 @@
+/* Component
+   ========================================================================== */
+
+/**
+ * @atdoc component
+ * @name Grid
+ *
+ * @description
+ * All content must be contained within child `Grid-cell` elements.
+ *
+ * Make use of dimension utilities, or components that extend `Grid` in order
+ * to apply particular widths to cells.
+ *
+ * 1. Account for browser defaults of elements that might be the root node of
+ *    the component.
+ * 2. Ensure consistent default alignment.
+ * 3. Remove inter-cell whitespace that appears between `inline-block` child
+ *    elements.
+ *
+ * #no-IE9-replace
+ *
+ * @example
+  <example module="GridExample">
+    <file name="index.html">
+      <div class="Grid">
+        <div class="Grid-cell u-size1of2"></div>
+        <div class="Grid-cell u-size1of2"></div>
+        <div class="Grid-cell u-size1of3"></div>
+        <div class="Grid-cell u-size1of3"></div>
+      </div>
+
+      <div class="Grid Grid--justifyCenter">
+        <div class="Grid-cell u-size1of3"></div>
+        <div class="Grid-cell u-size1of3"></div>
+      </div>
+    </file>
+  </example>
+ */
+.Grid {
+  display: block; /* 1 */
+  padding: 0; /* 1 */
+  margin: 0; /* 1 */
+
+  text-align: left; /* 2 */
+  font-size: 0; /* 3 */
+}
+
+/* Component modifiers
+   ========================================================================== */
+
+/**
+ * @atdoc componentModifier
+ * @name fit
+ * @component Grid
+ *
+ * @description
+ * Make all grid cells shrink wrap their content.
+ */
+.Grid--fit > .Grid-cell {
+  width: auto;
+}
+
+/**
+ * @atdoc componentModifier
+ * @name justifyCenter
+ * @component Grid
+ *
+ * @description
+ * Horizontally center all grid cells.
+ *
+ * Allows for automatic cell centering irrespective of the number of
+ * cells in the grid.
+ */
+.Grid--justifyCenter {
+  text-align: center;
+}
+
+/**
+ * @atdoc componentModifier
+ * @name justifyRight
+ * @component Grid
+ *
+ * @description
+ * Align all grid cells to right.
+ */
+.Grid--justifyRight {
+  text-align: right;
+}
+
+/**
+ * @atdoc componentModifier
+ * @name alignMiddle
+ * @component Grid
+ *
+ * @description
+ * Vertically align all grid cells to middle.
+ */
+.Grid--alignMiddle > .Grid-cell {
+  vertical-align: middle;
+}
+
+/**
+ * @atdoc componentModifier
+ * @name alignBottom
+ * @component Grid
+ *
+ * @description
+ * Vertically align all grid cells to bottom.
+ */
+.Grid--alignBottom > .Grid-cell {
+  vertical-align: bottom;
+}
+
+/**
+ * Modifiers for creating gutter between grid cells.
+ *
+ * .Grid--gutter<ORIENTATION><Size>
+ *
+ * <ORIENTATION> can be:
+ * * `A` = all
+ * * `H` = horizontal
+ * * `V` = vertical
+ *
+ * <Size> can be:
+ * * `Small`
+ * * `Medium`
+ * * `Regular`
+ * * `Large`
+ */
+
+/**
+ * @atdoc componentModifier
+ * @name gutterHSmall
+ * @name gutterVSmall
+ * @name gutterASmall
+ * @component Grid
+ *
+ * @description
+ * Small-sized cell gutter.
+ */
+.Grid--gutterASmall,
+.Grid--gutterHSmall {
+  margin-left: -5px;
+}
+
+.Grid--gutterASmall > .Grid-cell,
+.Grid--gutterHSmall > .Grid-cell {
+  padding-left: 5px;
+}
+
+.Grid--gutterASmall,
+.Grid--gutterVSmall {
+  margin-top: -5px;
+}
+
+.Grid--gutterASmall > .Grid-cell,
+.Grid--gutterVSmall > .Grid-cell {
+  padding-top: 5px;
+}
+
+/**
+ * @atdoc componentModifier
+ * @name gutterHMedium
+ * @name gutterVMedium
+ * @name gutterAMedium
+ * @component Grid
+ *
+ * @description
+ * Medium-sized cell gutter.
+ */
+.Grid--gutterAMedium,
+.Grid--gutterHMedium {
+  margin-left: -10px;
+}
+
+.Grid--gutterAMedium > .Grid-cell,
+.Grid--gutterHMedium > .Grid-cell {
+  padding-left: 10px;
+}
+
+.Grid--gutterAMedium,
+.Grid--gutterVMedium {
+  margin-top: -10px;
+}
+
+.Grid--gutterAMedium > .Grid-cell,
+.Grid--gutterVMedium > .Grid-cell {
+  padding-top: 10px;
+}
+
+/**
+ * @atdoc componentModifier
+ * @name gutterHRegular
+ * @name gutterVRegular
+ * @name gutterARegular
+ * @component Grid
+ *
+ * @description
+ * Regular-sized cell gutter.
+ */
+.Grid--gutterARegular,
+.Grid--gutterHRegular {
+  margin-left: -15px;
+}
+
+.Grid--gutterARegular > .Grid-cell,
+.Grid--gutterHRegular > .Grid-cell {
+  padding-left: 15px;
+}
+
+.Grid--gutterARegular,
+.Grid--gutterVRegular {
+  margin-top: -15px;
+}
+
+.Grid--gutterARegular > .Grid-cell,
+.Grid--gutterVRegular > .Grid-cell {
+  padding-top: 15px;
+}
+
+/**
+ * @atdoc componentModifier
+ * @name gutterHLarge
+ * @name gutterVLarge
+ * @name gutterALarge
+ * @component Grid
+ *
+ * @description
+ * Large-sized cell gutter.
+ */
+.Grid--gutterALarge,
+.Grid--gutterHLarge {
+  margin-left: -20px;
+}
+
+.Grid--gutterALarge > .Grid-cell,
+.Grid--gutterHLarge > .Grid-cell {
+  padding-left: 20px;
+}
+
+.Grid--gutterALarge,
+.Grid--gutterVLarge {
+  margin-top: -20px;
+}
+
+.Grid--gutterALarge > .Grid-cell,
+.Grid--gutterVLarge > .Grid-cell {
+  padding-top: 20px;
+}
+
+/**
+ * @atdoc componentModifier
+ * @name gutterHHuge
+ * @name gutterVHuge
+ * @name gutterAHuge
+ * @component Grid
+ *
+ * @description
+ * Huge-sized cell gutter.
+ */
+.Grid--gutterAHuge,
+.Grid--gutterHHuge {
+  margin-left: -40px;
+}
+
+.Grid--gutterAHuge > .Grid-cell,
+.Grid--gutterHHuge > .Grid-cell {
+  padding-left: 40px;
+}
+
+.Grid--gutterAHuge,
+.Grid--gutterVHuge {
+  margin-top: -40px;
+}
+
+.Grid--gutterAHuge > .Grid-cell,
+.Grid--gutterVHuge > .Grid-cell {
+  padding-top: 40px;
+}
+
+/**
+ * @atdoc componentModifier
+ * @name gutterHVast
+ * @name gutterVVast
+ * @name gutterAVast
+ * @component Grid
+ *
+ * @description
+ * Vast-sized cell gutter.
+ */
+.Grid--gutterAVast,
+.Grid--gutterHVast {
+  margin-left: -80px;
+}
+
+.Grid--gutterAVast > .Grid-cell,
+.Grid--gutterHVast > .Grid-cell {
+  padding-left: 80px;
+}
+
+.Grid--gutterAVast,
+.Grid--gutterVVast {
+  margin-top: -80px;
+}
+
+.Grid--gutterAVast > .Grid-cell,
+.Grid--gutterVVast > .Grid-cell {
+  padding-top: 80px;
+}
+
+/* Descendants
+   ========================================================================== */
+
+/**
+ * @atdoc descendant
+ * @name cell
+ * @component Grid
+ *
+ * @description
+ * No explicit width by default. Rely on combining `Grid-cell` with a dimension
+ * utility or component that extends `Grid`.
+ *
+ * 1. Fundamentals of the non-float grid layout.
+ * 2. Make cells full-width by default.
+ * 3. Controls vertical positioning of cells.
+ * 4. #no-IE8-drop
+ * 5. Reset font size change made in `Grid`.
+ * 6. Keeps content correctly aligned with the grid direction.
+ */
+.Grid-cell {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%; /* 2 */
+  vertical-align: top; /* 3 */
+
+  font-size: 13px; /* 4 */
+  font-size: .8125rem; /* 5 */
+  text-align: left; /* 6 */
+}
+
+/* Descendant modifiers
+   ========================================================================== */
+
+/**
+ * @atdoc descendantModifier
+ * @name fit
+ * @component Grid
+ * @descendant cell
+ *
+ * @description
+ * Make one cell shrink wrap its content.
+ */
+.Grid-cell--fit {
+  width: auto;
+}
+
+/**
+ * @atdoc descendantModifier
+ * @name center
+ * @component Grid
+ * @descendant cell
+ *
+ * @description
+ * Horizontally center one cell.
+ *
+ * Set a specific cell to be horizontally centered. Doesn't affect
+ * any other cells. The cell has to have `width` specified. Can still contain
+ * a `Grid` component.
+ */
+.Grid-cell--center {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/**
+ * @atdoc descendantModifier
+ * @name right
+ * @component Grid
+ * @descendant cell
+ *
+ * @description
+ * Align cell to right.
+ */
+.Grid-cell--right {
+  display: block;
+  margin-left: auto;
+}
