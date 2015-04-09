@@ -218,9 +218,25 @@
 }
 
 .u-textGreen {
-  color: $green;
+  color: $green !important;
 }
 
 .u-textRed {
-  color: $red;
+  color: $red !important;
+}
+
+.u-textYellow {
+  color: $yellow !important;
+}
+
+.u-textBase1 {
+  color: $base1 !important;
+}
+
+.u-textBase2 {
+  color: $base2 !important;
+}
+
+.u-textBase3 {
+  color: $base3 !important;
 }

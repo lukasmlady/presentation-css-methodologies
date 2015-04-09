@@ -395,8 +395,17 @@ Reveal.addEventListener( 'customevent', function() {
 
 				transition: 'slide', // none/fade/slide/convex/concave/zoom
 
-				// Optional reveal.js plugins
+//        multiplex: {
+//          // Example values. To generate your own, see the socket.io server instructions.
+//          secret: "14282706413677601819",
+//          id: "d650cc42737ddcfa",
+//          url: "http://revealjs.jit.su:80" // Location of socket.io server
+//        },
+
+      // Optional reveal.js plugins
 				dependencies: [
+//          { src: 'lib/js/socket.io-1.3.4.js', async: true },
+//          { src: 'plugin/multiplex/master.js', async: true },
 					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
 					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
